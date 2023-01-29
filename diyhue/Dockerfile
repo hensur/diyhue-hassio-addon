@@ -31,6 +31,8 @@ RUN curl -J -L -o $diyhue.tar.gz "https://github.com/diyhue/diyHue/archive/refs/
 # Set working directory to the Archive folder
 WORKDIR /opt/hue-emulator
 
+RUN mkdir -p /opt/hue-emulator/config
+
 # Install diyHue
 RUN mv /diyhue/BridgeEmulator/HueObjects/										./HueObjects/
 RUN mv /diyhue/BridgeEmulator/configManager/ 									./configManager/
